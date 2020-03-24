@@ -17,15 +17,16 @@ public:
     void revealField(int x, int y);
     bool isRevealed(int x, int y) const;
     GameState getGameState() const;
+    void toggleFlag(int x, int y);
     char getFieldInfo(int x, int y) const;
     ~MinesweeperBoard();
 
 private:
-    Field board_[100][100];
-    GameMode mode_;
-    GameState state_;
-    int width_;
-    void toggleFlag(int x, int y);
-    int height_;
+    Field board[100][100];
+    GameMode mode;
+    GameState state;
+    int width;
+    int height;
+    bool areCordsValid(int x, int y) const;
 };
 #endif //ADRJNK_MINESWEEPERBOARD_HPP

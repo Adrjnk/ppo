@@ -3,9 +3,9 @@
 
 struct Field
 {
-    bool hasMine;
-    bool hasFlag;
-    bool isRevealed;
+    bool hasMine=0;
+    bool hasFlag=0;
+    bool isRevealed=1;
 };
 
 
